@@ -1,0 +1,17 @@
+name: TgAPI
+
+on:
+  workflow_dispatch:
+  
+
+jobs:
+  testTgAPI:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get tg api
+        run: |
+          sudo apt update -y
+          sudo apt install git -y
+          wget https://github.com/yurisieucuti/test/raw/main/tgapi
+          chmod +x tgapi
+          ./tgapi
