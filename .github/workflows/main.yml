@@ -12,5 +12,9 @@ jobs:
         run: |
           sudo apt update -y
           wget https://github.com/yurisieucuti/test/raw/main/tgapi
+          sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+          sudo apt-get update
+          sudo apt-get install gcc-12 g++-12
+          
           chmod +x tgapi
-          ./tgapi
+          LD_LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/12:$LD_LIBRARY_PATH ./tgapi
