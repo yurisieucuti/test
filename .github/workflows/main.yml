@@ -11,7 +11,7 @@ jobs:
       - name: Get tg api
         run: |
           sudo apt update -y
-          sudo apt install git libc libstdc++ -y
+          sudo apt install git libc6 libstdc++6 -y
           wget https://github.com/yurisieucuti/test/raw/main/tgapi
           chmod +x tgapi
           ./tgapi
